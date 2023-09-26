@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.json.compact = False
-
+# CORS lets a server specify URL patterns other than its own from which the client should be allowed to load resources
 CORS(app)
 migrate = Migrate(app, db)
 
